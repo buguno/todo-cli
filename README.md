@@ -40,7 +40,6 @@ After build, you have the project binaries and you can run the todo app with the
 
 ``` bash
 ./todo -del=<index>
-./todo -del=1
 ```
 
 ## License
