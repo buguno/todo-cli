@@ -1,6 +1,9 @@
 package todo
 
-import "time"
+import (
+	"errors"
+	"time"
+)
 
 type item struct {
 	Task        string
@@ -20,4 +23,17 @@ func (t *Todos) Add(task string) {
 	}
 
 	*t = append(*t, todo)
+}
+
+func (t *Todos) Complete(index int) error {
+	ls := *t
+
+	if index <= 0 || index > len(ls) {
+		return errors.New("invalid index")
+	}
+
+	ls[index-1].CompletedAt = time.Now()
+	ls[index-1].Done = true
+
+	return nil
 }
