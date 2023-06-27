@@ -93,7 +93,7 @@ func (t *Todos) Print() {
 	table.Header = &simpletable.Header{
 		Cells: []*simpletable.Cell{
 			{Align: simpletable.AlignCenter, Text: "#"},
-			{Align: simpletable.AlignCenter, Text: "task"},
+			{Align: simpletable.AlignCenter, Text: "Task"},
 			{Align: simpletable.AlignCenter, Text: "Done"},
 			{Align: simpletable.AlignCenter, Text: "CreatedAt"},
 			{Align: simpletable.AlignCenter, Text: "CompletedAt"},
